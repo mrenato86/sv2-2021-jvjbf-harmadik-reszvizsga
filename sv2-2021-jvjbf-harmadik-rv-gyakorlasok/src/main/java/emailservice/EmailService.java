@@ -1,11 +1,11 @@
 package emailservice;
 
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class EmailService {
 
-    private final Set<User> users = new HashSet<>();
+    private final Set<User> users = new LinkedHashSet<>();
 
     public void registerUser(String email) {
         if (!isValidEmailAddress(email)) {
@@ -39,6 +39,6 @@ public class EmailService {
     }
 
     public Set<User> getUsers() {
-        return new HashSet<>(users);
+        return new LinkedHashSet<>(users);
     }
 }
